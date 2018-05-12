@@ -67,3 +67,8 @@
 ;; neotree ウィンドウを表示する毎に current file のあるディレクトリを表示する
 (setq neo-smart-open t)
 (global-set-key [f8] 'neotree-toggle)
+
+;; for ruby
+(require 'rspec-mode)
+(require 'ruby-electric)
+(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
