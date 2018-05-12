@@ -42,6 +42,7 @@
 ;; 行番号・桁番号を表示する
 (line-number-mode 1)
 (column-number-mode 1)
+(linum-mode 1)
 
 ;; 履歴を保存する
 (setq history-length 1000)
