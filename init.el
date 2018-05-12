@@ -57,3 +57,12 @@
 
 ;; magit
 (require 'magit)
+
+;; neotree
+(require 'neotree)
+(setq neo-show-hidden-files t)
+(setq neo-create-file-auto-open t)
+(setq neo-persist-show t)
+;; neotree ウィンドウを表示する毎に current file のあるディレクトリを表示する
+(setq neo-smart-open t)
+(global-set-key [f8] 'neotree-toggle)
