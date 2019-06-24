@@ -12,6 +12,9 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
+;; 日本語の設定（UTF-8	
+(set-language-environment 'Japanese)	
+(prefer-coding-system 'utf-8)
 
 ;; バックアップファイルを作らないようにする
 (setq make-backup-files nil)
