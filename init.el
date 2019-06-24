@@ -1,34 +1,23 @@
-;; パッケージの設定
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
-(package-initialize)
+;; for straight.el
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
 
-;; 右から左に読む言語に対応させないことで描画高速化
-(setq-default bidi-display-reordering nil)
-
-;; 同じ内容を履歴に記録しないようにする
-(setq history-delete-duplicates t)
-
-;; 日本語の設定（UTF-8
-(set-language-environment 'Japanese)
-(prefer-coding-system 'utf-8)
-
-;; 現在行を目立たせる
-;;(global-hl-line-mode 1)
 
 ;; バックアップファイルを作らないようにする
 (setq make-backup-files nil)
 
 ;; 終了時にオートセーブファイルを消す
 (setq delete-auto-save-files t)
-
-;; 複数のディレクトリで同じファイル名のファイルを開いたときのバッファ名を調整する
-(require 'uniquify)
-
-;; filename<dir> 形式のバッファ名にする
-(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
-(setq uniquify-ignore-buffers-re "[^*]+")
 
 ;; 対応する括弧をハイライトする
 (show-paren-mode 1)
@@ -46,29 +35,3 @@
 
 ;; 履歴を保存する
 (setq history-length 1000)
-
-;; メニューバーとツールバーとスクロールバーを消す
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-
-;; helmの設定
-(require 'helm-config)
-(helm-mode 1)
-
-;; magit
-(require 'magit)
-
-;; neotree
-(require 'neotree)
-(setq neo-show-hidden-files t)
-(setq neo-create-file-auto-open t)
-(setq neo-persist-show t)
-;; neotree ウィンドウを表示する毎に current file のあるディレクトリを表示する
-(setq neo-smart-open t)
-(global-set-key [f8] 'neotree-toggle)
-
-;; for ruby
-(require 'rspec-mode)
-(require 'ruby-electric)
-(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
