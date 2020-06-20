@@ -2,10 +2,7 @@
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)
 
-;; バックアップファイルを作らないようにする
 (setq make-backup-files nil)
-
-;; 終了時にオートセーブファイルを消す
 (setq delete-auto-save-files t)
 
 ;; 対応する括弧をハイライトする
@@ -14,10 +11,16 @@
 ;; ミニバッファ履歴を次回Emacs起動時にも保存する
 (savehist-mode 1)
 
-;; 行番号・桁番号を表示する
 (line-number-mode 1)
 (column-number-mode 1)
 (global-linum-mode 1)
 
-;; 履歴を保存する
 (setq history-length 1000)
+
+;; scroll setting
+(setq next-screen-context-lines 30)
+(setq scroll-preserve-screen-position t)
+
+(menu-bar-mode -1)
+
+(global-set-key (kbd "C-c g") 'goto-line)
