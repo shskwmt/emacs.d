@@ -6,6 +6,7 @@
 (straight-use-package 'magit)
 (straight-use-package 'dashboard)
 (straight-use-package 'company)
+(straight-use-package 'autopair)
 
 ;; language modes
 (straight-use-package 'rust-mode)
