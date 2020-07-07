@@ -13,7 +13,9 @@
 
 (line-number-mode 1)
 (column-number-mode 1)
-(global-linum-mode 1)
+(add-hook 'find-file-hooks 'linum-mode)
+
+(add-hook 'find-file-hooks 'whitespace-mode)
 
 (setq history-length 1000)
 

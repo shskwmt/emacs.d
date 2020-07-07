@@ -1,7 +1,7 @@
 ;; for straight.el
 (defvar bootstrap-version)
 (let ((bootstrap-file
-        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
       (bootstrap-version 5))
   (unless (file-exists-p bootstrap-file)
     (with-current-buffer
