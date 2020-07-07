@@ -1,14 +1,11 @@
-;; 日本語の設定（UTF-8
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)
 
 (setq make-backup-files nil)
 (setq delete-auto-save-files t)
 
-;; 対応する括弧をハイライトする
 (show-paren-mode 1)
 
-;; ミニバッファ履歴を次回Emacs起動時にも保存する
 (savehist-mode 1)
 
 (line-number-mode 1)
