@@ -13,6 +13,7 @@
 (add-hook 'find-file-hooks 'linum-mode)
 
 (add-hook 'find-file-hooks 'whitespace-mode)
+(setq whitespace-line-column 2000)
 
 (setq history-length 1000)
 

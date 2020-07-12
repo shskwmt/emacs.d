@@ -7,6 +7,7 @@
 (straight-use-package 'dashboard)
 (straight-use-package 'company)
 (straight-use-package 'autopair)
+(straight-use-package 'popwin)
 
 ;; language modes
 (straight-use-package 'rust-mode)
