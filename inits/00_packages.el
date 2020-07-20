@@ -11,3 +11,7 @@
 
 ;; language modes
 (straight-use-package 'rust-mode)
+(straight-use-package 'go-mode)
+(straight-use-package 'ruby-mode)
+(straight-use-package 'scala-mode)
+(straight-use-package 'java-mode)
