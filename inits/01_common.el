@@ -21,6 +21,8 @@
 (setq next-screen-context-lines 30)
 (setq scroll-preserve-screen-position t)
 
+(setq-default tab-width 4 indent-tabs-mode nil)
+
 (menu-bar-mode -1)
 
 (global-set-key (kbd "C-c g") 'goto-line)
