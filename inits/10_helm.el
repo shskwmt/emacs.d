@@ -16,4 +16,6 @@
 (setq helm-buffers-fuzzy-matching t
       helm-recentf-fuzzy-match    t)
 
+(global-set-key (kbd "C-c h g") 'helm-grep-do-git-grep)
+
 (helm-mode 1)
