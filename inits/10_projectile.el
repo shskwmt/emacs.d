@@ -1,4 +1,3 @@
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-
-(helm-projectile-on)
+(counsel-projectile-mode)
