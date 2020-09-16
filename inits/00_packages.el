@@ -10,6 +10,7 @@
 (straight-use-package 'company)
 (straight-use-package 'autopair)
 (straight-use-package 'popwin)
+(straight-use-package 'powerline)
 
 ;; language modes
 (straight-use-package 'rust-mode)
