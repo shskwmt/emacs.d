@@ -17,3 +17,6 @@
 (straight-use-package 'go-mode)
 (straight-use-package 'ruby-mode)
 (straight-use-package 'scala-mode)
+(straight-use-package 'typescript-mode)
+(straight-use-package 'vue-mode)
+(straight-use-package 'pug-mode)
